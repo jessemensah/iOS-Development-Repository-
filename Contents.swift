@@ -278,3 +278,40 @@ func multiplyDivide(_ number: Int, by factor: Int) -> (product: Int, quotient: I
 let results = multiplyDivide(3, by: 2)
 let product = results.product
 let quotient = results.quotient
+
+
+// OPTIONALS
+// NILS
+var devName = "Jesse Amoako Mensah"
+var devAge = 30
+var devOccupation = "Software Developer & Author"
+
+// force unwrap the optional
+var resulti: Int? = 30
+print(resulti)
+
+if resulti != nil {
+    print("Author is \(resulti!)")
+} else {
+    print("No author")
+}
+
+// optional binding
+if let unwrappedResult = resulti {
+    print("Author is \(unwrappedResult)")
+} else {
+    print("No author.")
+}
+
+
+// check the condition only before executing
+func guardMyCastle(name: String?) {
+    guard let castleName = name else {
+        print("No Castle")
+        return
+    }
+    
+    print("Your castle called \(castleName) was guarded!")
+}
+
+// COLLECTION TYPES 
